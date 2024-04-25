@@ -26,7 +26,7 @@ export const getReviewsByService = async (req: Request, res: Response) => {
   try {
     const reviews = await ReviewModel.aggregate([
       {
-        $match: { serviceId: req.params.serviceId },
+        $match: { animalId: req.params.serviceId },
       },
       {
         $addFields: {

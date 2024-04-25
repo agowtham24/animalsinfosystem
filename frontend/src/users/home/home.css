@@ -1,0 +1,8 @@
+.fa-thumbs-up {
+  font-size: larger;
+  margin-top: 20px;
+}
+.fa-thumbs-up:hover {
+    cursor: pointer;
+    color: red;
+}
