@@ -37,15 +37,15 @@ export function Header() {
               {isLogin ? (
                 <>
                   <li className="nav-item">
-                    <Link to="/admin/users" className="nav-link">
-                      View Users
+                    <Link to="/admin/animals" className="nav-link">
+                      View animals
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link to="/admin/instructors" className="nav-link">
                       View Instructors
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li className="nav-item dropdown">
                     <a

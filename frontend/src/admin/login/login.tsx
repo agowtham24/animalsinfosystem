@@ -61,7 +61,7 @@ export function AdminLogin() {
                             data.password === "admin"
                           ) {
                             sessionStorage.setItem("admin", "admin");
-                            navigate("/admin/users");
+                            navigate("/admin/animals");
                           } else {
                             toast.error("Invalid credentials");
                           }

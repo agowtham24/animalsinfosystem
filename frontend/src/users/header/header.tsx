@@ -1,26 +1,12 @@
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { api } from "../../utils/apiconfig";
-import { formatDate } from "../../sharedFunctions";
 export function Header() {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
-  const [notifications, setNotifications] = useState([] as any[]);
-  const fetchNotifications = async () => {
-    try {
-      const user = JSON.parse(sessionStorage.getItem("user") as string);
-      const response = await api.get(`notifications/${user.id}`);
-      console.log(response.data, "notifications");
-      setNotifications(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+ 
+ 
 
-  useEffect(() => {
-    fetchNotifications();
-  }, []);
   useEffect(() => {
     if (sessionStorage.getItem("user")) {
       setIsLogin(true);
@@ -31,7 +17,7 @@ export function Header() {
     <div className="navbox">
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand">Skill Craft</a>
+          <a className="navbar-brand">Animals Info System</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -54,19 +40,19 @@ export function Header() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/users/about" className="nav-link">
                   About
                 </Link>
-              </li>
+              </li> */}
               {isLogin ? (
                 <>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link to="/users/courses" className="nav-link">
                       Registered Courses
                     </Link>
-                  </li>
-                  <li className="nav-item dropdown position-relative">
+                  </li> */}
+                  {/* <li className="nav-item dropdown position-relative">
                     <a
                       className="nav-link"
                       href="#"
@@ -127,7 +113,7 @@ export function Header() {
                         </>
                       ))}
                     </ul>
-                  </li>
+                  </li> */}
                   <li
                     className="nav-item dropdown"
                     style={{
